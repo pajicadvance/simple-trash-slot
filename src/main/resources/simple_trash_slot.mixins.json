@@ -1,0 +1,12 @@
+{
+  "package": "me.pajic.simple_trash_slot.mixin",
+  "required": true,
+  "minVersion": "0.8",
+  "mixinextras": {"minVersion": "0.5.3"},
+  "compatibilityLevel": "${java}",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [],
+  "client": []
+}

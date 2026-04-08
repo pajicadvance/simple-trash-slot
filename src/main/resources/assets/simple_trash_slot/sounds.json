@@ -1,0 +1,6 @@
+{
+  "trash": {
+    "subtitle": "sound.simple_trash_slot.trash",
+    "sounds": ["simple_trash_slot:trash"]
+  }
+}
