@@ -1,1 +1,1 @@
-- Initial release.
+- Fixed conflict with Trinkets Updated.

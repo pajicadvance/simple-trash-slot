@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(value = InventoryMenu.class, priority = Integer.MAX_VALUE)
+@Mixin(value = InventoryMenu.class, priority = 1)
 public abstract class InventoryMenuMixin extends AbstractCraftingMenu {
 
     public InventoryMenuMixin(MenuType<?> menuType, int containerId, int width, int height) {
@@ -25,7 +25,7 @@ public abstract class InventoryMenuMixin extends AbstractCraftingMenu {
 
     @Inject(
 			method = "<init>",
-			at = @At("TAIL")
+			at = @At("RETURN")
 	)
     private void addTrashSlot(Inventory inventory, boolean active, Player owner, CallbackInfo ci) {
 		STSUtil.computeSlot(slots);
