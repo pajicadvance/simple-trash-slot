@@ -22,7 +22,7 @@ public class STSUtil {
 		RandomSource random = player.level().getRandom();
 		switch (STSConfig.CONFIG.sound()) {
 			case LAVA_SIZZLE -> player.playSound(SoundEvents.LAVA_EXTINGUISH, 0.5F, 2.6F + (random.nextFloat() - random.nextFloat()) * 0.8F);
-			case PAPER_BIN_TOSS -> player.playSound(STS.TRASH_SOUND, 0.7F, 1 + (random.nextFloat() - random.nextFloat()) * 0.4F);
+			case PAPER_BIN_TOSS -> player.playSound(STS.TRASH_SOUND, 1.7F, 1 + (random.nextFloat() - random.nextFloat()) * 0.4F);
 		}
 	}
 }

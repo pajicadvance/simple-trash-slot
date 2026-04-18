@@ -39,7 +39,7 @@ public abstract class InventoryMenuMixin extends AbstractCraftingMenu {
 			@SuppressWarnings("DataFlowIssue")
 			@Override
 			public boolean isActive() {
-				return owner.gameMode().isSurvival();
+				return !owner.hasContainerOpen() && owner.gameMode().isSurvival();
 			}
         });
     }

@@ -1,1 +1,2 @@
-- Fixed conflict with Trinkets Updated.
+- Restricted the trash slot to only be active in the player's survival inventory to prevent possible issues.
+- Increased the volume of the custom item trashing sound.
