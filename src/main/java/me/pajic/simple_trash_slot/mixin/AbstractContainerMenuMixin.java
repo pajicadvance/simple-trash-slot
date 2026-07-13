@@ -8,6 +8,7 @@ import me.pajic.simple_trash_slot.STSUtil;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ClickAction;
+import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -27,7 +28,7 @@ public abstract class AbstractContainerMenuMixin {
 			@Local(name = "slotIndex", argsOnly = true) int slotIndex,
 			@Local(name = "player", argsOnly = true) Player player
 	) {
-		if (slotIndex == STSUtil.slotId) {
+		if ((AbstractContainerMenu) (Object) this instanceof InventoryMenu && slotIndex == STSUtil.slotId) {
 			if (!original.isEmpty()) STSUtil.playSound(player);
 			return ItemStack.EMPTY;
 		}
@@ -53,7 +54,10 @@ public abstract class AbstractContainerMenuMixin {
 			@Local(name = "carried") ItemStack carried,
 			@Local(name = "clickAction") ClickAction clickAction
 	) {
-		if (slotIndex == STSUtil.slotId && carried.count() == original.count() && clickAction == ClickAction.PRIMARY) {
+		if (
+				(AbstractContainerMenu) (Object) this instanceof InventoryMenu && slotIndex == STSUtil.slotId &&
+				carried.count() == original.count() && clickAction == ClickAction.PRIMARY
+		) {
 			if (!original.isEmpty()) STSUtil.playSound(player);
 			return ItemStack.EMPTY;
 		}

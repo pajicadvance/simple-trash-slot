@@ -1,1 +1,1 @@
-- Fixed startup issue on latest NeoForge.
+- Fixed a bug that caused a specific slot inside double chests to sometimes act like a trash slot.
