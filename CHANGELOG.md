@@ -1,2 +1,5 @@
-- Added Fabric 26.3 version.
-- Added NeoForge 26.2 version.
+- Added NeoForge 26.3 version.
+- Rewrote the trash slot to use a custom 1 slot container instead of being an extension of the player inventory container. This fixes the issue where trashed armor would act as if it's equipped on the player, among other issues.
+- Fixed the game crashing when the config file is empty or contains an invalid position or sound. Invalid values are now reset to defaults.
+- The trash sound now only plays for the player trashing the item.
+- The config file is now fully client side and is no longer created on dedicated servers.

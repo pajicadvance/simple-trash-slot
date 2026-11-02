@@ -3,6 +3,7 @@ package me.pajic.simple_trash_slot;
 import net.minecraft.core.NonNullList;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 
@@ -17,8 +18,12 @@ public class STSUtil {
 		}
 	}
 
-	@SuppressWarnings("resource")
+	public static SimpleContainer getTrash(Player player) {
+		return ((TrashHolder) player).sts$getTrash();
+	}
+
 	public static void playSound(Player player) {
+		if (!player.level().isClientSide()) return;
 		RandomSource random = player.level().getRandom();
 		switch (STSConfig.CONFIG.sound()) {
 			case LAVA_SIZZLE -> player.playSound(SoundEvents.LAVA_EXTINGUISH, 0.5F, 2.6F + (random.nextFloat() - random.nextFloat()) * 0.8F);

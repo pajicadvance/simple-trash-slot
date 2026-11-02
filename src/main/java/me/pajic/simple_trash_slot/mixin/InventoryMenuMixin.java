@@ -30,7 +30,7 @@ public abstract class InventoryMenuMixin extends AbstractCraftingMenu {
     private void addTrashSlot(Inventory inventory, boolean active, Player owner, CallbackInfo ci) {
 		STSUtil.computeSlot(slots);
 		SlotPosition pos = STSConfig.CONFIG.pos();
-        addSlot(new Slot(inventory, STSUtil.slotId - 5, pos.x + 1, pos.y + 1) {
+        addSlot(new Slot(STSUtil.getTrash(owner), 0, pos.x + 1, pos.y + 1) {
             @Override
             public Identifier getNoItemIcon() {
                 return STS.id("container/slot/trash");

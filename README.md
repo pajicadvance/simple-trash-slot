@@ -2,6 +2,6 @@
 
 This mod adds a trash slot to the inventory where you can discard unwanted items. The slot holds the last item you put into it, and it only gets truly deleted when you put another item over it.
 
-There is a small config file `simple_trash_slot.json` where you can set the position of the trash slot in the inventory. The allowed positions are shown below. The default position is `H2`. You can also set the sound played when discarding items. Valid values are `NONE`, `PAPER_BIN_TOSS`, and `LAVA_SIZZLE`.
+There is a small client-side config file `simple_trash_slot.json` where you can set the position of the trash slot in the inventory. The allowed positions are shown below. The default position is `H2`. You can also set the sound played when discarding items. Valid values are `NONE`, `PAPER_BIN_TOSS`, and `LAVA_SIZZLE`.
 
 ![Allowed item positions](https://cdn.modrinth.com/data/cached_images/c4d3d9b1b018a3bdb3e1f88b6cbc50caf190e1f8.png)

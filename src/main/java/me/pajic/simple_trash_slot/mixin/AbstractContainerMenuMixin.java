@@ -51,12 +51,12 @@ public abstract class AbstractContainerMenuMixin {
 			ItemStack original,
 			@Local(name = "slotIndex", argsOnly = true) int slotIndex,
 			@Local(name = "player", argsOnly = true) Player player,
-			@Local(name = "carried") ItemStack carried,
 			@Local(name = "clickAction") ClickAction clickAction
 	) {
 		if (
-				(AbstractContainerMenu) (Object) this instanceof InventoryMenu && slotIndex == STSUtil.slotId &&
-				carried.count() == original.count() && clickAction == ClickAction.PRIMARY
+				(AbstractContainerMenu) (Object) this instanceof InventoryMenu &&
+                slotIndex == STSUtil.slotId &&
+				clickAction == ClickAction.PRIMARY
 		) {
 			if (!original.isEmpty()) STSUtil.playSound(player);
 			return ItemStack.EMPTY;

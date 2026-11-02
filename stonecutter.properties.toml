@@ -2,7 +2,7 @@
 mod.id = "simple_trash_slot"
 mod.name = "Simple Trash Slot"
 mod.group = "me.pajic"
-mod.version = "1.0.5"
+mod.version = "1.0.6"
 mod.description = "Adds an inventory slot for discarding items"
 mod.authors = "pajic"
 mod.contributors = ""
@@ -67,7 +67,7 @@ mod.mc_compat = "[26.2, 26.3)"
 
 ["26.3"]
 mod.mc_releases = ["26.3"]
-#loader.neo = "26.2.0.36-beta"
+loader.neo = "26.3.0.101"
 runtime.sodium = "0.9.2+mc26.3"
 
 [fabric."26.3"]
@@ -75,5 +75,5 @@ mod.mc_compat = "~26.3"
 required.fabric-api = "0.160.5+26.3"
 runtime.modmenu = "21.0.0-beta.1"
 
-#[neoforge."26.2"]
-#mod.mc_compat = "[26.3, 26.4)"
+[neoforge."26.3"]
+mod.mc_compat = "[26.3, 26.4)"
